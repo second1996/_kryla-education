@@ -1,0 +1,36 @@
+@import '../helpers/helpers'
+
+.grid-bg
+	position: fixed
+	top: 0
+	left: 100px
+	right: 100px
+	bottom: 0
+	z-index: -1
+	display: flex
+	justify-content: space-between
+	[class*="col"]
+		height: 100vh
+		border-right: 1px solid $border
+
+main.site-main
+	padding-left: 100px
+	padding-right: 100px
+	padding-bottom: 200px
+
+.page-wing
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		width: 700px
+		height: 460px
+		mask-image: url('../images/dist/wing.svg')
+		mask-repeat: no-repeat
+		mask-size: contain
+	&.wing-right::after
+		right: -20px
+	&.wing-purple::after
+		background-color: $purple
+		opacity: 0.08

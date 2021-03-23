@@ -1,0 +1,217 @@
+// Section: Heroes
+.h-heroes
+	position: relative
+	z-index: 100 // Right sidebar overlap
+	height: 100vh
+	background-color: $blue
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 100%
+		bottom: 0
+		width: 100%
+		background-color: $blue
+	&-container,
+	&-wrapper
+		height: 100%
+
+	// Scroll down
+	&-scroll
+		position: absolute
+		bottom: 60px
+		left: 50%
+		&-arrow
+			pointer-events: none
+			backface-visibility: visible
+			transform: rotate(-90deg)
+			+media-breakpoint-up(md)
+				bottom: 0
+				left: 50%
+				transform: rotate(-90deg) translateY(50%)
+				transform-origin: left bottom
+				min-width: 150px
+			> span
+				display: inline-block
+				vertical-align: middle
+				fill: $white
+				color: $white
+			> span:nth-child(1)
+				overflow: hidden
+				transform: rotate(180deg)
+				> svg
+					transition: $trs
+					animation: scroll-down 2.2s ease-in infinite
+			> span:nth-child(2)
+				margin-right: 10px
+				background-color: $blue
+				font-size: 14px
+				font-weight: $w-bold
+
+	// Main content
+	&-content
+		position: absolute
+		top: 50%
+		left: 10px
+		max-width: 660px
+		transform: translateY(-50%)
+		.label
+			display: inline-flex
+			align-items: center
+			margin-bottom: 30px
+			padding: 10px 20px
+			background-color: $yellow-200
+		.title
+			margin-bottom: 20px
+			font-size: 48px
+			line-height: 1.25em
+		.descr
+			max-width: 590px
+			margin-bottom: 0
+		.btn
+			margin-top: 40px
+
+	// Adress
+	&-adress
+		position: absolute
+		left: 30px
+		bottom: 50px
+		> span
+			opacity: 0.6
+
+	// Photo
+	&-photo
+		position: absolute
+		right: 160px
+		bottom: 0
+		display: flex
+		align-items: flex-end
+		height: 100%
+		> img
+			width: 100%
+			height: 100%
+			object-position: bottom
+			object-fit: scale-down
+			padding-top: 120px
+
+	// Page lines
+	.grid-bg
+		position: absolute
+		left: 0
+		right: 0
+		[class*="col"]
+			border-color: rgba(0,0,0, 0.04)
+
+
+// Section: About
+.h-about
+	&-content
+		padding-top: 75px
+		.title
+			font-weight: $w-regular
+	&-text
+		max-width: 720px
+	&-photo
+		position: absolute
+		top: 0
+		right: -100px
+		width: 880px
+		height: 580px
+		mask-image: url('../images/dist/wing.svg')
+		mask-repeat: no-repeat
+		mask-size: contain
+
+
+// Section: Owner
+.h-owner
+	&-photo
+		text-align: center
+		img
+			padding: 100px 36px 0
+
+
+// Section: Concept
+.h-concept
+	&-item
+	&-number
+		color: $blue
+		font-size: 120px
+		font-weight: $w-black
+		line-height: 0.75
+		text-align: center
+		-webkit-text-fill-color: $trsp
+		-webkit-text-stroke: 1px $blue
+	&-text
+		padding-right: 60px
+
+
+// Section: Team
+.h-team
+	&-card
+		padding-right: 20px
+	&-photo
+		margin-bottom: 30px
+	&-meta
+		.name,
+		.post
+			margin-bottom: 10px
+
+
+// Section: Features
+.h-features
+	&-title
+		display: flex
+		align-items: center
+		position: relative
+		> span
+			padding-right: 20px
+			color: $yellow-300
+			font-size: 120px
+			line-height: 0.75
+
+	// Slider nav
+	&-slider
+		.swiper-slide
+			height: auto
+		&-nav
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100%
+			.progress
+				position: relative
+				.swiper-counter
+					position: absolute
+					top: -30px
+					left: -7px
+					transform: rotate(-90deg)
+					transform-origin: left top
+			.swiper-pagination
+				position: static
+				height: 400px
+			.swiper-menu
+				margin-left: 40px
+
+	// Slider content
+	&-item
+		height: 100%
+		overflow: hidden
+		display: flex
+		align-items: stretch
+	&-content
+		flex: 0 0 60%
+		padding: 50px
+		background-color: $bg-gray
+		.ul-circle > li
+			font-size: 15px
+			&:not(:last-child)
+				margin-bottom: 16px
+	&-photo
+		width: 40%
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		padding-right: 1px
+		img
+			object-position: top

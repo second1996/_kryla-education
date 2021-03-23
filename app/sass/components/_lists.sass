@@ -1,0 +1,33 @@
+// Check list
+ul.ul-check
+	> li
+		display: flex
+		color: $dark
+		&::before
+			content: ''
+			flex: 0 0 auto
+			position: relative
+			top: 6px
+			width: 15px
+			height: 15px
+			margin-right: 10px
+			background: url('../images/dist/icons/check-yellow.svg') no-repeat center/cover
+
+// Circle list
+ul.ul-circle
+	> li
+		display: flex
+		color: $dark
+		&::before
+			content: ''
+			flex: 0 0 auto
+			position: relative
+			top: 4px
+			width: 17px
+			height: 17px
+			margin-right: 12px
+			border-radius: 50%
+	&--yellow > li::before
+		background-color: $yellow-200
+	&--purple > li::before
+		background-color: $purple

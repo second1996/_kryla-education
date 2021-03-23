@@ -1,0 +1,38 @@
+@import '../helpers/helpers'
+
+.site-header
+	position: absolute
+	top: 0
+	left: 100px
+	right: 100px
+	z-index: 110
+	display: flex
+	align-items: center
+	height: 120px
+	&-wrapper
+		> [class*="col"]
+			padding-left: 0
+			padding-right: 0
+	.nav
+		counter-reset: nav-number
+		display: flex
+		&-item
+			display: inline-flex
+			flex: 0 0 20%
+			max-width: 20%
+			padding-left: 20px
+			font-size: 16px
+			font-weight: $w-medium
+			> span,
+			> .number
+				margin-right: 6px
+				color: $white
+				opacity: 0.4
+			> .number::before
+				counter-increment: nav-number
+				content: counter(nav-number, decimal-leading-zero)
+		&-link
+			color: $white
+			text-transform: uppercase
+			&:hover
+				color: $yellow-200

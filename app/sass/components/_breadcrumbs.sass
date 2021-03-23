@@ -1,0 +1,27 @@
+.breadcrumbs
+	margin-bottom: 20px
+	&-list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		> li
+			display: inline-flex
+			align-items: center
+			color: $text
+			&:not(:last-child)::after
+				content: '/'
+				display: inline-block
+				vertical-align: middle
+				margin: 0 12px
+				+font-size(xxs)
+			> a,
+			> span
+				font-size: 15px
+				font-weight: $w-medium
+				text-transform: uppercase
+			> a
+				color: $dark
+				&:hover
+					color: $purple
+			> span
+				color: $gray-200

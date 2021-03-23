@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Автоматика для ворот</title>
+	<meta name="description" content="Автоматика для ворот 750">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<main>
+		<div class="container">
+
+			<style>
+				main {
+					padding-top: 32px;
+				}
+				.pages-list {
+					counter-reset: page;
+					padding-left: 0;
+				}
+				.pages-list li {
+					list-style: none;
+					margin-bottom: 8px;
+				}
+				.pages-list li::before {
+					counter-increment: page;
+					content: counter(page);
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 26px;
+					height: 26px;
+					margin-right: 12px;
+					border-radius: 50%;
+					color: #fff;
+					background-color: #63B1BC;
+					font-size: 14px;
+					font-weight: 500;
+					transition: .3s ease;
+				}
+				.pages-list li a {
+					display: inline-block;
+				}
+				.pages-list li a:hover {
+					color: #63B1BC;
+					text-decoration: underline;
+				}
+			</style>
+
+			<div class="pages-logo mb-48">
+				<!-- <img src="images/logo.svg" alt="Приватна гімназія «Крила»"> -->
+			</div>
+			<h3 class="mb-20 text-md">Приватна гімназія «Крила»</h3>
+			<ol class="pages-list">
+				<li><a href="page-home.html">Головна сторіка</a></li>
+			</ol>
+
+		</div><!-- /.container -->
+	</main>
+
+</body>
+</html>

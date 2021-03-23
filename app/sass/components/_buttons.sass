@@ -1,0 +1,52 @@
+/* ==========================================================================
+	 Base customize for button
+	 ========================================================================== */
+.btn, button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 68px
+	padding-left: 20px
+	padding-right: 20px
+	border: none
+	background-color: $white
+	color: $dark
+	font-family: inherit
+	font-size: 12px
+	font-weight: $w-bold
+	line-height: 1.3em
+	letter-spacing: 0.05em
+	text-align: center
+	text-transform: uppercase
+	white-space: nowrap
+	outline: none!important
+	user-select: none
+	transition: $trs
+	&:hover
+		color: inherit
+		background-color: $bg-blue
+	&:focus
+		box-shadow: 0 0 0 3px rgba($dark, 0.15)
+		background-color: $white
+
+/* ==========================================================================
+	 Button themes
+	 ========================================================================== */
+.btn
+	min-width: 284px
+	&.btn-yellow
+		background-color: $yellow-200
+		color: $dark
+		&:hover
+			background-color: darken($yellow-200, 8%)
+		&:focus
+			box-shadow: 0 0 0 3px rgba($yellow-200, 0.35)
+			background-color: $yellow-200
+	&.btn-purple
+		background-color: $purple
+		color: $white
+		&:hover
+			background-color: darken($purple, 5%)
+		&:focus
+			box-shadow: 0 0 0 3px rgba($purple, 0.35)
+			background-color: $purple
