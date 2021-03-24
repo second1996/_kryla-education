@@ -1,1 +1,50 @@
 @import '../helpers/helpers'
+
+.footer
+	margin-left: 100px
+	margin-right: 100px
+
+	// Call to action
+	&-cta
+		position: relative
+		z-index: 1
+		padding-top: 100px
+		padding-bottom: 100px
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+		&::before
+			background: url('../images/dist/footer-cta.jpg') no-repeat center/cover
+		&::after
+			background-color: rgba($purple, 0.95)
+		&-inner
+			display: flex
+			justify-content: space-between
+		&-content
+			.title
+				max-width: 750px
+			.descr
+				max-width: 600px
+		&-form
+			width: 350px
+
+	// Footer bottom
+	&-bottom
+		padding-top: 50px
+		padding-bottom: 50px
+		&-inner
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.madeby
+				color: $gray-300
+				> span
+					color: red
+				&:hover
+					color: $purple

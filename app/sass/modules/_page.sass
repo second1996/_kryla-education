@@ -29,8 +29,14 @@ main.site-main
 		mask-image: url('../images/dist/wing.svg')
 		mask-repeat: no-repeat
 		mask-size: contain
+	&.wing-left::after
+		left: -20px
+		transform: scaleX(-1)
 	&.wing-right::after
 		right: -20px
 	&.wing-purple::after
 		background-color: $purple
 		opacity: 0.08
+	&.wing-yellow::after
+		background-color: $yellow-200
+		opacity: 0.15

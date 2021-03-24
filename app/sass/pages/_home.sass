@@ -81,6 +81,7 @@
 
 	// Photo
 	&-photo
+		user-select: none
 		position: absolute
 		right: 160px
 		bottom: 0
@@ -215,3 +216,132 @@
 		padding-right: 1px
 		img
 			object-position: top
+
+
+// Section: Classroom
+.h-classroom
+	&-card
+		overflow: hidden
+		position: relative
+		height: 100%
+		min-height: 450px
+		padding: 25px 10px 25px 25px
+		margin-right: 20px
+		&:hover
+			.wing
+				transform: scale(1.25)
+		.title
+			margin-bottom: 10px
+		.descr
+			margin-bottom: 30px
+		.link
+			display: inline-flex
+			align-items: center
+			> span
+				font-size: 13px
+				font-weight: $w-bold
+				line-height: 1.3
+				letter-spacing: 0.05em
+				text-transform: uppercase
+			> .icon
+				width: 20px
+				margin-left: 10px
+		.shadow-text
+			user-select: none
+			pointer-events: none
+			position: absolute
+			bottom: 0
+			right: -32px
+			font-size: 120px
+			font-weight: $w-black
+			line-height: 1
+			text-align: center
+			-webkit-text-fill-color: $trsp
+		.wing
+			user-select: none
+			pointer-events: none
+			position: absolute
+			top: 15px
+			right: -10px
+			transition: transform .3s ease
+			> svg
+				width: 180px
+				height: 120px
+				fill: $white
+		&--yellow
+			background-color: $yellow-200
+			.title,
+			.descr,
+			.link
+				color: $dark
+			.link:hover
+				color: $purple
+			.shadow-text
+				color: $white
+				-webkit-text-stroke: 1px $white
+			.wing > svg
+				opacity: 0.2
+		&--purple
+			background-color: $purple
+			.title,
+			.descr,
+			.link
+				color: $white
+			.link:hover
+				color: $yellow-200
+			.shadow-text
+				color: $yellow-200
+				-webkit-text-stroke: 1px $yellow-200
+			.wing > svg
+				opacity: 0.1
+
+
+// Section: Gallery
+.h-gallery
+	.page-wing
+		top: -130px
+	&-content
+		padding-right: 45px
+
+
+// Section: Reviews
+.h-reviews
+	&-list
+		[class*="col"]:nth-child(odd)
+			.h-reviews-item
+				padding-right: 30px
+		[class*="col"]:nth-child(even)
+			.h-reviews-item
+				padding-left: 30px
+	&-item
+		> iframe
+			width: 100%
+			height: 300px
+
+
+// Section: Partners
+.h-partners
+	&-item
+		padding: 15px
+		height: 150px
+
+
+// Section: Steps
+.h-steps
+	&-title
+		> span
+			display: block
+			font-size: 64px
+	&-list
+	&-item
+	&-number
+		color: $blue
+		font-size: 100px
+		font-weight: $w-black
+		line-height: 0.75
+		text-align: center
+		-webkit-text-fill-color: $trsp
+		-webkit-text-stroke: 1px $blue
+	&-text
+		max-width: 80%
+		padding-right: 60px

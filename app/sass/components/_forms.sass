@@ -3,6 +3,7 @@
 	 ========================================================================== */
 ::placeholder
 	color: $text
+	font-weight: $w-regular
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -36,13 +37,14 @@ label
 		border: none
 		background-color: $white
 		background-clip: padding-box
-		color: $text
+		color: $dark
 		font-size: 15px
-		font-weight: $w-regular
+		font-weight: $w-medium
 		line-height: 1.5
 		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .3s ease-in-out
 		&:focus
 			outline: none
+			box-shadow: 0 0 0 3px rgba($yellow-300, 0.25)
 
 	// Input
 	&-control,
@@ -61,3 +63,27 @@ label
 	&-textarea
 		resize: none
 		padding: 20px
+
+	// Submit button
+	.btn-submit
+		width: 100%
+
+	// Form group
+	&-group
+		position: relative
+		margin-bottom: 20px
+		&-icon
+			position: absolute
+			top: 16px
+			bottom: 16px
+			display: flex
+			align-items: center
+			padding-left: 20px
+			padding-right: 20px
+			border-right: 1px solid $gray-200
+			.icon
+				width: 16px
+				height: 16px
+				fill: $text
+		.form-control
+			padding-left: 78px
