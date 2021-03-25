@@ -9,11 +9,20 @@
 		z-index: 99
 		width: 100px
 		background-color: $white
+		+media-breakpoint-down(xl)
+			width: 80px
+	.right-side
+		+media-breakpoint-down(lg)
+			display: none
 
 	// Left side
 	.left-side
 		left: 0
 		border-right: 1px solid $border
+		+media-breakpoint-down(lg)
+			bottom: auto
+			z-index: 999
+			width: 100%
 		&-wrapper
 			display: flex
 			flex-direction: column
@@ -21,11 +30,25 @@
 			justify-content: space-between
 			height: 100%
 			padding: 50px 16px
+			+media-breakpoint-down(lg)
+				flex-direction: row
+				height: 70px
+				padding: 0 40px
+			+media-breakpoint-down(sm)
+				padding: 0 20px
 			.logo
+				+media-breakpoint-down(lg)
+					order: 1
+					transform: rotate(90deg)
 			.burger
 				position: absolute
 				top: 50%
 				transform: translateY(-50%)
+				+media-breakpoint-down(lg)
+					order: 0
+					position: static
+					transform: none
+					margin: -10px
 				.btn-burger
 					display: flex
 					flex-direction: column
@@ -54,10 +77,18 @@
 							&:nth-child(3)
 								transform: translateY(-9px) rotate(-45deg)
 			.social
+				+media-breakpoint-down(lg)
+					order: 2
 				&-list
+					+media-breakpoint-down(lg)
+						display: flex
+						align-items: center
 				&-item
 					&:not(:last-child)
 						margin-bottom: 20px
+						+media-breakpoint-down(lg)
+							margin-right: 0
+							margin-bottom: 0
 				&-link
 					padding: 10px
 					color: $dark

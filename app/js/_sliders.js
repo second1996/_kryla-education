@@ -10,6 +10,11 @@ SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, Controller])
 const featuresSlider = new Swiper('.h-features-slider .swiper-container', {
 	slidesPerView: 1,
 	spaceBetween: 30,
+	autoHeight: true,
+	navigation: {
+		prevEl: '.h-features-navigation .swiper-button-prev',
+		nextEl: '.h-features-navigation .swiper-button-next'
+	},
 	pagination: {
 		el: '.h-features-slider .swiper-pagination',
 		type: 'progressbar',
@@ -17,6 +22,12 @@ const featuresSlider = new Swiper('.h-features-slider .swiper-container', {
 	},
 	scrollbar: {
 		el: '.h-features-slider-nav .swiper-scrollbar'
+	},
+	breakpoints: {
+		1240: {
+			autoHeight: false,
+			navigation: false
+		}
 	},
 	on: {
 		init: function(swiper) {

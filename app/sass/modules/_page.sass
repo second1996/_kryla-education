@@ -9,6 +9,11 @@
 	z-index: -1
 	display: flex
 	justify-content: space-between
+	+media-breakpoint-down(xl)
+		left: 80px
+		right: 80px
+	+media-breakpoint-down(lg)
+		display: none
 	[class*="col"]
 		height: 100vh
 		border-right: 1px solid $border
@@ -17,6 +22,13 @@ main.site-main
 	padding-left: 100px
 	padding-right: 100px
 	padding-bottom: 200px
+	+media-breakpoint-down(xl)
+		padding-left: 80px
+		padding-right: 80px
+		padding-bottom: 150px
+	+media-breakpoint-down(lg)
+		padding-left: 0px
+		padding-right: 0px
 
 .page-wing
 	position: relative
@@ -24,20 +36,36 @@ main.site-main
 		content: ''
 		position: absolute
 		top: 0
-		// width: 700px
-		width: 36vw
+		width: 700px
 		height: 460px
 		mask-image: url('../images/dist/wing.svg')
 		mask-repeat: no-repeat
 		mask-size: contain
+		+media-breakpoint-down(xl)
+			width: 600px
+			height: 400px
+		+media-breakpoint-down(lg)
+			width: 500px
+			height: 300px
+		+media-breakpoint-down(xs)
+			width: 400px
+			height: 200px
 	&.wing-left::after
 		left: -20px
 		transform: scaleX(-1)
+		+media-breakpoint-down(xl)
+			left: -65px
+		+media-breakpoint-down(xs)
+			left: -100px
 	&.wing-right::after
 		right: -20px
+		+media-breakpoint-down(xl)
+			right: -65px
+		+media-breakpoint-down(xs)
+			right: -100px
 	&.wing-purple::after
 		background-color: $purple
-		opacity: 0.08
+		opacity: 0.1
 	&.wing-yellow::after
 		background-color: $yellow-200
 		opacity: 0.15

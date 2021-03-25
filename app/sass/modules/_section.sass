@@ -5,12 +5,18 @@
 	margin-top: 200px
 	+media-breakpoint-down(xl)
 		margin-top: 150px
+	+media-breakpoint-down(lg)
+		margin-top: 100px
 	&-blue
 		padding-top: 150px
 		padding-bottom: 150px
 		+media-breakpoint-down(xl)
+			z-index: 1
 			padding-top: 100px
 			padding-bottom: 100px
+		+media-breakpoint-down(xs)
+			padding-top: 60px
+			padding-bottom: 60px
 		&::before
 			content: ''
 			position: absolute
@@ -23,6 +29,12 @@
 	&-heading
 		max-width: 60%
 		margin-bottom: 50px
+		+media-breakpoint-down(xl)
+			max-width: 85%
+		+media-breakpoint-down(lg)
+			max-width: 100%
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
 		.title
 			margin-bottom: 0
 		.descr

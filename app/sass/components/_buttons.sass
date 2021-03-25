@@ -35,6 +35,12 @@
 	 ========================================================================== */
 .btn
 	min-width: 284px
+	+media-breakpoint-down(xl)
+		min-width: 299px
+	+media-breakpoint-down(sm)
+		min-width: 260px
+	+media-breakpoint-down(xxs)
+		min-width: 100%
 	&.btn-yellow
 		background-color: $yellow-200
 		color: $dark

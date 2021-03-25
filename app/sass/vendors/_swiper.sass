@@ -14,6 +14,36 @@
 
 
 /* ==========================================================================
+	 Swiper navigation
+	 ========================================================================== */
+.btn.swiper-button-prev,
+.btn.swiper-button-next
+	width: 40px
+	min-width: auto
+	height: 40px
+	border: none
+	background-color: $yellow-200
+	color: $dark
+	&:hover
+		background-color: $purple
+		color: $white
+	&:focus,
+	&:active
+		box-shadow: 0 0 0 3px rgba($yellow-200, 0.5)
+	.icon
+		flex: 0 0 auto
+		width: 14px
+		height: 14px
+		margin-left: 0
+	&.swiper-button-disabled
+		pointer-events: none
+		opacity: 0.25
+.btn.swiper-button-prev
+	.icon
+		transform: scaleX(-1)
+
+
+/* ==========================================================================
 	 Counter
 	 ========================================================================== */
 .swiper-counter

@@ -3,6 +3,12 @@
 .footer
 	margin-left: 100px
 	margin-right: 100px
+	+media-breakpoint-down(xl)
+		margin-left: 80px
+		margin-right: 80px
+	+media-breakpoint-down(lg)
+		margin-left: 0
+		margin-right: 0
 
 	// Call to action
 	&-cta
@@ -10,6 +16,9 @@
 		z-index: 1
 		padding-top: 100px
 		padding-bottom: 100px
+		+media-breakpoint-down(md)
+			padding-top: 60px
+			padding-bottom: 60px
 		&::before,
 		&::after
 			content: ''
@@ -25,15 +34,33 @@
 			background-color: rgba($purple, 0.95)
 		&-inner
 			display: flex
+			align-items: center
 			justify-content: space-between
+			+media-breakpoint-down(sm)
+				flex-direction: column
+				align-items: flex-start
 		&-content
 			padding-right: 40px
 			.title
 				max-width: 750px
+				+media-breakpoint-down(md)
+					font-size: 32px
+				+media-breakpoint-down(xs)
+					font-size: 28px
 			.descr
 				max-width: 600px
 		&-form
-			width: 350px
+			flex: 0 0 350px
+			+media-breakpoint-down(lg)
+				flex-basis: 300px
+			+media-breakpoint-down(md)
+				flex-basis: 260px
+			+media-breakpoint-down(sm)
+				flex-basis: 100%
+				width: 100%
+				margin-top: 40px
+			.btn-submit
+				min-width: 100%
 
 	// Footer bottom
 	&-bottom
@@ -43,8 +70,13 @@
 			display: flex
 			align-items: center
 			justify-content: space-between
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				text-align: center
 			.madeby
 				color: $gray-300
+				+media-breakpoint-down(xs)
+					margin-top: 30px
 				> span
 					color: red
 				&:hover

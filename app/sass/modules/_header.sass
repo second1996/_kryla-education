@@ -9,6 +9,12 @@
 	display: flex
 	align-items: center
 	height: 120px
+	+media-breakpoint-down(xl)
+		left: 80px
+		right: 80px
+		height: 100px
+	+media-breakpoint-down(lg)
+		display: none
 	&-wrapper
 		> [class*="col"]
 			padding-left: 0
@@ -24,6 +30,11 @@
 			font-size: 16px
 			font-weight: $w-medium
 			line-height: 1.2
+			+media-breakpoint-down(xl)
+				flex: 1 1 auto
+				max-width: 100%
+				padding-left: 0
+				padding-right: 20px
 			> span,
 			> .number
 				margin-right: 6px

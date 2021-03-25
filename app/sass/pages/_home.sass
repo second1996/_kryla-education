@@ -3,7 +3,15 @@
 	position: relative
 	z-index: 100 // Right sidebar overlap
 	height: 100vh
+	min-height: 620px
 	background-color: $blue
+	+media-breakpoint-down(lg)
+		margin-top: 70px
+	+media-breakpoint-down(sm)
+		height: auto
+		min-height: auto
+		padding-top: 60px
+		padding-bottom: 60px
 	&::after
 		content: ''
 		position: absolute
@@ -51,10 +59,14 @@
 	// Main content
 	&-content
 		position: absolute
+		z-index: 1
 		top: 50%
-		left: 10px
-		max-width: 660px
+		left: 0
+		max-width: 720px
 		transform: translateY(-50%)
+		+media-breakpoint-down(sm)
+			position: static
+			transform: none
 		.label
 			display: inline-flex
 			align-items: center
@@ -75,16 +87,21 @@
 	// Adress
 	&-adress
 		position: absolute
-		left: 30px
+		left: 20px
 		bottom: 50px
 		> span
 			opacity: 0.6
+		+media-breakpoint-down(xl)
+			left: 0
+		+media-breakpoint-down(sm)
+			position: static
+			padding-top: 50px
 
 	// Photo
 	&-photo
 		user-select: none
 		position: absolute
-		right: 160px
+		right: 3vw
 		bottom: 0
 		display: flex
 		align-items: flex-end
@@ -92,16 +109,19 @@
 		+media-breakpoint-down(xl)
 			right: 0
 			justify-content: flex-end
+		+media-breakpoint-down(lg)
+			> img
+				object-position: bottom right
+		+media-breakpoint-down(md)
+			right: -12vw
+		+media-breakpoint-down(sm)
+			display: none
 		> img
 			width: 100%
 			height: 100%
 			object-position: bottom
 			object-fit: scale-down
 			padding-top: 120px
-			+media-breakpoint-down(xl)
-				width: 90%
-				height: 90%
-				object-position: bottom right
 
 	// Page lines
 	.grid-bg
@@ -115,46 +135,102 @@
 // Section: About
 .h-about
 	&-content
+		position: relative
+		z-index: 1
 		padding-top: 75px
+		+media-breakpoint-down(lg)
+			padding-top: 0
+		+media-breakpoint-down(xs)
+			.ul-check > li
+				margin-bottom: 10px
+	&-title
+		max-width: 80%
+		+media-breakpoint-down(xl)
+			max-width: 60%
+		+media-breakpoint-down(lg)
+			max-width: 50%
+		+media-breakpoint-down(md)
+			max-width: 100%
 		.title
 			font-weight: $w-regular
+			+media-breakpoint-down(md)
+				font-size: 28px
 	&-text
-		max-width: 720px
+		max-width: 90%
+		+media-breakpoint-down(xl)
+			max-width: 75%
+		+media-breakpoint-down(lg)
+			max-width: 60%
+		+media-breakpoint-down(md)
+			max-width: 100%
 	&-photo
 		position: absolute
 		top: 0
 		right: -100px
 		width: 42vw
-		// width: 880px
-		// height: 580px
 		mask-image: url('../images/dist/wing.svg')
 		mask-repeat: no-repeat
 		mask-size: contain
+		+media-breakpoint-down(lg)
+			width: 56vw
+			top: -25px
+		+media-breakpoint-down(md)
+			display: none
 
 
 // Section: Owner
 .h-owner
+	.page-wing
+		+media-breakpoint-down(sm)
+			display: none
+	&-speech
+		padding-left: 30px
+		+media-breakpoint-down(md)
+			padding-left: 0
 	&-photo
 		text-align: center
 		img
 			padding: 100px 36px 0
+		+media-breakpoint-down(xl)
+			img
+				padding-left: 0
+				padding-right: 0
+		+media-breakpoint-down(md)
+			display: none
 
 
 // Section: Concept
 .h-concept
 	margin-top: 150px
+	+media-breakpoint-between(lg, lg)
+		.container-fluid
+			padding-left: 0
+			padding-right: 0
+	&-heading
+		+media-breakpoint-down(sm)
+			text-align: left
 	&-item
+		+media-breakpoint-down(md)
+			padding-right: 20px
 	&-number
 		color: $blue
 		// font-size: 120px
-		font-size: calc(90px + 1vw + 1vh)
+		font-size: calc(65px + 2vw + 2vh)
 		font-weight: $w-black
 		line-height: 0.75
 		text-align: center
 		-webkit-text-fill-color: $trsp
 		-webkit-text-stroke: 1px $blue
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+			font-size: 60px
+			text-align: left
 	&-text
 		padding-right: 60px
+		+media-breakpoint-down(xl)
+			padding-right: 30px
+		+media-breakpoint-down(md)
+			padding-right: 10px
 		.title
 			line-height: 1.2
 
@@ -162,10 +238,15 @@
 // Section: Team
 .h-team
 	margin-top: 150px
+	&-list
+		+media-breakpoint-down(xl)
+			margin-right: -20px
 	&-card
 		padding-right: 20px
 	&-photo
 		margin-bottom: 30px
+		+media-breakpoint-down(xl)
+			margin-bottom: 15px
 	&-meta
 		.name,
 		.post
@@ -174,15 +255,44 @@
 
 // Section: Features
 .h-features
+	+media-breakpoint-down(sm)
+		padding-top: 60px
+		padding-bottom: 60px
+		background-color: $bg-gray
+	&-heading
+		display: flex
+		align-items: flex-end
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			align-items: flex-start
+	&-navigation
+		user-select: none
+		flex: 0 0 auto
+		margin-left: 30px
+		.btn
+			margin-left: 10px
+		+media-breakpoint-down(sm)
+			margin-top: 30px
+			margin-left: 0
+			.btn
+				margin-left: 0
 	&-title
 		display: flex
 		align-items: center
-		position: relative
+		+media-breakpoint-down(md)
+			max-width: 600px
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			align-items: flex-start
 		> span
 			padding-right: 20px
 			color: $yellow-300
 			font-size: 120px
 			line-height: 0.75
+			+media-breakpoint-down(sm)
+				margin-bottom: 12px
+				padding-right: 0
+				font-size: 90px
 
 	// Slider nav
 	&-slider
@@ -206,6 +316,8 @@
 				height: 400px
 			.swiper-menu
 				margin-left: 40px
+				+media-breakpoint-down(xl)
+					margin-left: 30px
 
 	// Slider content
 	&-item
@@ -217,6 +329,15 @@
 		flex: 0 0 60%
 		padding: 50px
 		background-color: $bg-gray
+		+media-breakpoint-down(lg)
+			padding: 30px 40px
+		+media-breakpoint-down(md)
+			flex-basis: 100%
+		+media-breakpoint-down(sm)
+			padding: 0
+			background-color: $trsp
+		.title
+			line-height: 1.2
 		.ul-circle > li
 			font-size: 15px
 			&:not(:last-child)
@@ -230,6 +351,8 @@
 		padding-right: 1px
 		img
 			object-position: top
+		+media-breakpoint-down(md)
+			display: none
 
 
 // Section: Classroom
@@ -242,6 +365,10 @@
 		min-height: 450px
 		padding: 25px 10px 25px 25px
 		margin-right: 20px
+		+media-breakpoint-down(xl)
+			min-height: 320px
+		+media-breakpoint-down(xs)
+			min-height: 280px
 		&:hover
 			.wing
 				transform: scale(1.25)
@@ -249,6 +376,8 @@
 			margin-bottom: 10px
 		.descr
 			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				margin-bottom: 16px
 		.link
 			display: inline-flex
 			align-items: center
@@ -266,6 +395,7 @@
 			pointer-events: none
 			position: absolute
 			bottom: 0
+			z-index: -1
 			right: -32px
 			font-size: 120px
 			font-weight: $w-black
@@ -317,19 +447,26 @@
 .h-gallery
 	.page-wing
 		top: -130px
+		+media-breakpoint-down(lg)
+			top: -80px
+		+media-breakpoint-down(lg)
+			display: none
 	&-content
 		padding-right: 45px
+		+media-breakpoint-down(md)
+			margin-bottom: 40px
 
 
 // Section: Reviews
 .h-reviews
 	&-list
-		[class*="col"]:nth-child(odd)
-			.h-reviews-item
-				padding-right: 30px
-		[class*="col"]:nth-child(even)
-			.h-reviews-item
-				padding-left: 30px
+		+media-breakpoint-up(md)
+			[class*="col"]:nth-child(odd)
+				.h-reviews-item
+					padding-right: 30px
+			[class*="col"]:nth-child(even)
+				.h-reviews-item
+					padding-left: 30px
 	&-item
 		> iframe
 			width: 100%
@@ -341,14 +478,18 @@
 	&-item
 		padding: 15px
 		height: 150px
+		+media-breakpoint-down(lg)
+			padding: 10px
 
 
 // Section: Steps
 .h-steps
 	&-title
+		padding-right: 20px
 		> span
 			display: block
-			font-size: 64px
+			// font-size: 64px
+			font-size: 135%
 	&-list
 	&-item
 	&-number
@@ -360,7 +501,19 @@
 		text-align: center
 		-webkit-text-fill-color: $trsp
 		-webkit-text-stroke: 1px $blue
+		+media-breakpoint-down(xl)
+			text-align: left
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+			font-size: 60px
 	&-text
 		max-width: 80%
+		+media-breakpoint-down(xl)
+			max-width: 90%
+		+media-breakpoint-down(md)
+			max-width: 100%
+			padding-right: 20px
 		.title
 			line-height: 1.2
+	&-btn
+		margin-top: 50px
