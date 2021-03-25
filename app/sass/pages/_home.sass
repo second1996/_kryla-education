@@ -5,11 +5,10 @@
 	height: 100vh
 	min-height: 620px
 	background-color: $blue
-	+media-breakpoint-down(lg)
-		margin-top: 70px
 	+media-breakpoint-down(sm)
 		height: auto
 		min-height: auto
+		margin-top: 60px
 		padding-top: 60px
 		padding-bottom: 60px
 	&::after
@@ -62,10 +61,11 @@
 		z-index: 1
 		top: 50%
 		left: 0
-		max-width: 720px
+		max-width: 75%
 		transform: translateY(-50%)
 		+media-breakpoint-down(sm)
 			position: static
+			max-width: 100%
 			transform: none
 		.label
 			display: inline-flex
@@ -109,9 +109,6 @@
 		+media-breakpoint-down(xl)
 			right: 0
 			justify-content: flex-end
-		+media-breakpoint-down(lg)
-			> img
-				object-position: bottom right
 		+media-breakpoint-down(md)
 			right: -12vw
 		+media-breakpoint-down(sm)
@@ -122,6 +119,8 @@
 			object-position: bottom
 			object-fit: scale-down
 			padding-top: 120px
+			+media-breakpoint-down(lg)
+				object-position: bottom right
 
 	// Page lines
 	.grid-bg
@@ -516,4 +515,5 @@
 		.title
 			line-height: 1.2
 	&-btn
+		position: relative
 		margin-top: 50px

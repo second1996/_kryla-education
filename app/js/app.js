@@ -22,5 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	*/
 	require('./_scripts.js')
 	require('./_sliders.js')
-
 })

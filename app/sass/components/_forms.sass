@@ -19,6 +19,9 @@ input::-webkit-inner-spin-button
 input[type=number]
 	-moz-appearance: textfield
 
+input[readonly]
+	pointer-events: none
+
 input, textarea
 	outline: none
 	font-family: $userfont
@@ -53,6 +56,8 @@ label
 		height: 68px
 		padding-left: 20px
 		padding-right: 20px
+		+media-breakpoint-down(xs)
+			height: 60px
 		&--number
 			-moz-appearance: textfield
 			&::-webkit-outer-spin-button,

@@ -1,0 +1,31 @@
+<!-- Modal: Join Team -->
+<div class="modal fade" id="joinTeamModal" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Приєднатися до команди</h5>
+				<button type="button" class="modal-close btn" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="modal-form form">
+					<div class="form-group">
+						<div class="form-group-icon">
+							<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#user"></use></svg>
+						</div>
+						<input type="text" class="form-control" placeholder="Ваше ім'я" autocomplete="off" required>
+					</div>
+					<div class="form-group">
+						<div class="form-group-icon">
+							<svg class="icon icon-phone"><use xlink:href="images/symbol-defs.svg#phone"></use></svg>
+						</div>
+						<input type="tel" class="form-control" data-mask="+38 (999) 999-99-99" placeholder="+38 (___) ___-__-__" autocomplete="off" required>
+					</div>
+					<button type="submit" class="btn btn-yellow btn-submit">Надіслати</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -5,15 +5,83 @@
 	overflow-x: hidden
 	position: fixed
 	top: 0
-	left: 0
-	right: 0
+	left: 100px
 	bottom: 0
+	width: 320px
 	z-index: 999
 	background-color: $white
 	visibility: hidden
 	opacity: 0
-	transition: $trs
+	transform: translate3d(-10px, 0, 0)
+	transition: .15s ease
+	+media-breakpoint-down(xl)
+		left: 80px
+	+media-breakpoint-down(lg)
+		top: 60px
+		left: 0
 	&._is-active
 		pointer-events: auto
 		visibility: visible
 		opacity: 1
+		transform: none
+		.mmenu-heading,
+		.mmenu-nav > li
+			animation-name: fadeInRight
+			animation-fill-mode: both
+			animation-duration: 0.5s
+
+	// Backdrop
+	&-backdrop
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 998
+		background-color: rgba($dark, 0.75)
+		opacity: 0
+		&.show
+			opacity: 1
+
+	// Main
+	&-wrapper
+		padding: 46px 30px
+		+media-breakpoint-down(lg)
+			padding: 20px 40px 40px
+		+media-breakpoint-down(sm)
+			padding-left: 20px
+			padding-right: 20px
+	&-heading
+		line-height: 1
+		margin-bottom: 30px
+		transition: $trs
+	&-nav
+		counter-reset: menu-counter
+		@for $i from 1 through 10
+			> li:nth-child(#{$i})
+				animation-delay: $i*0.1s
+		> li
+			position: relative
+			padding-left: 26px
+			transition: $trs
+			&::before
+				counter-increment: menu-counter
+				content: counter(menu-counter, decimal-leading-zero)
+				flex: 0 0 auto
+				position: absolute
+				top: -5px
+				left: 0
+				width: 16px
+				color: rgba($dark, 0.25)
+				font-size: 14px
+				font-weight: $w-bold
+				text-align: right
+			&:not(:last-child)
+				margin-bottom: 20px
+			> a
+				display: inline-block
+				color: $dark
+				font-size: 17px
+				font-weight: $w-medium
+				&:hover
+					color: $purple
