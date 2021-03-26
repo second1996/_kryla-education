@@ -10,18 +10,49 @@
 				</button>
 			</div>
 			<div class="modal-body">
+				<p class="modal-descr">Заповніть інформацію про Вашу дитину та Ваші контактні дані і наш адміністратор зв’яжеться з вами.</p>
 				<form class="modal-form form">
-					<div class="form-group d-none" id="classroom-request">
+					<div class="form-group" id="classroom-request" hidden>
 						<div class="form-group-icon">
 							<svg class="icon icon-pen"><use xlink:href="images/symbol-defs.svg#pen"></use></svg>
 						</div>
 						<input type="text" class="form-control" readonly>
 					</div>
+					<div class="form-group" id="classroom-choose" hidden>
+						<div class="form-group-icon">
+							<svg class="icon icon-pen"><use xlink:href="images/symbol-defs.svg#pen"></use></svg>
+						</div>
+						<select class="form-control form-select" required>
+							<option value="" selected disabled hidden>Оберіть навчальний клас</option>
+							<option value="1">1-й клас</option>
+							<option value="2">2-й клас</option>
+							<option value="5">5-й клас</option>
+							<option value="6">6-й клас</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="form-group-icon">
+							<svg class="icon icon-child"><use xlink:href="images/symbol-defs.svg#child"></use></svg>
+						</div>
+						<input type="text" class="form-control" placeholder="ПІБ дитини" autocomplete="off" required>
+					</div>
+					<div class="form-group">
+						<div class="form-group-icon">
+							<svg class="icon icon-date"><use xlink:href="images/symbol-defs.svg#date"></use></svg>
+						</div>
+						<input type="text" class="form-control" data-mask="00/00/0000" placeholder="Дата народження дитини" autocomplete="off" required>
+					</div>
+					<div class="form-group">
+						<div class="form-group-icon">
+							<svg class="icon icon-book"><use xlink:href="images/symbol-defs.svg#book"></use></svg>
+						</div>
+						<input type="text" class="form-control" placeholder="Попередній шкільний/дошкільний заклад" autocomplete="off" required>
+					</div>
 					<div class="form-group">
 						<div class="form-group-icon">
 							<svg class="icon icon-user"><use xlink:href="images/symbol-defs.svg#user"></use></svg>
 						</div>
-						<input type="text" class="form-control" placeholder="Ваше ім'я" autocomplete="off" required>
+						<input type="text" class="form-control" placeholder="ПІБ контактної особи" autocomplete="off" required>
 					</div>
 					<div class="form-group">
 						<div class="form-group-icon">

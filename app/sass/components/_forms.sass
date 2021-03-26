@@ -65,6 +65,12 @@ label
 				-webkit-appearance: none
 				margin: 0
 
+	// Select
+	&-select
+		background: $white url('../images/dist/icons/down-arrow.svg') no-repeat right 20px center / 14px
+		+media-breakpoint-down(xs)
+			background-position: right 16px center
+
 	// Textarea
 	&-textarea
 		resize: none
@@ -87,9 +93,14 @@ label
 			padding-left: 20px
 			padding-right: 20px
 			border-right: 1px solid $gray-200
+			+media-breakpoint-down(xs)
+				padding-left: 16px
+				padding-right: 16px
 			.icon
 				width: 16px
 				height: 16px
 				fill: $text
 		.form-control
 			padding-left: 78px
+			+media-breakpoint-down(xs)
+				padding-left: 64px
