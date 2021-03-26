@@ -69,3 +69,18 @@ main.site-main
 	&.wing-yellow::after
 		background-color: $yellow-200
 		opacity: 0.15
+
+.page-heading
+	padding-top: 150px
+	padding-bottom: 150px
+	+media-breakpoint-down(lg)
+		padding-top: 100px
+		padding-bottom: 60px
+	&-breadcrumbs
+		margin-bottom: 20px
+	&-title
+		.title
+			margin-bottom: 0
+			// font-size: 62px
+			font-size: calc(24px + 1.5vw + 1.5vh)
+			line-height: 1.15

@@ -1,0 +1,47 @@
+.p-contacts
+	&-wrapper
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+		+media-breakpoint-down(md)
+			flex-direction: column
+	&-info
+		+media-breakpoint-up(lg)
+			padding-right: 100px
+	&-map
+		flex: 1 1 auto
+		background-color: $bg-blue
+		+media-breakpoint-down(md)
+			margin-top: 50px
+		iframe
+			width: 100%
+			height: 100%
+			min-height: 400px
+	&-item
+		&:not(:last-child)
+			margin-bottom: 50px
+			+media-breakpoint-down(md)
+				margin-bottom: 30px
+		.descr
+			a
+				color: $text
+				&:hover
+					color: $blue
+		.social
+			&-title
+				margin-bottom: 10px
+			&-list
+				display: flex
+				flex-wrap: wrap
+				align-items: baseline
+				> a
+					font-size: 26px
+					font-weight: $w-black
+					&:not(:last-child)
+						margin-right: 30px
+					&:hover
+						opacity: 0.75
+					&.facebook
+						color: #4867AA
+					&.instagram
+						color: #ED4B61

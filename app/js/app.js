@@ -7,6 +7,7 @@ window.$ = $
 require('../../node_modules/popper.js/dist/popper.min.js') // Popper lib
 require('../../node_modules/bootstrap/js/dist/util.js') // Bootstrap Util lib
 require('../../node_modules/bootstrap/js/dist/modal.js') // Bootstrap Modal
+require('../../node_modules/bootstrap/js/dist/collapse.js') // Bootstrap Collapse (Accordion)
 require('../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js') // jQuery Mask
 
 // Import Fancybox

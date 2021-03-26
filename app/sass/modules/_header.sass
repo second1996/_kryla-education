@@ -1,17 +1,29 @@
 @import '../helpers/helpers'
 
+body.home
+	.site-header
+		position: absolute
+		top: 0
+		left: 100px
+		right: 100px
+		z-index: 110
+		+media-breakpoint-down(xl)
+			left: 80px
+			right: 80px
+		.nav-item
+			> span,
+			> .number
+				color: $white
+		.nav-link
+			color: $white
+			&:hover
+				color: $yellow-200
+
 .site-header
-	position: absolute
-	top: 0
-	left: 100px
-	right: 100px
-	z-index: 110
 	display: flex
 	align-items: center
 	height: 120px
 	+media-breakpoint-down(xl)
-		left: 80px
-		right: 80px
 		height: 100px
 	+media-breakpoint-down(lg)
 		display: none
@@ -38,13 +50,16 @@
 			> span,
 			> .number
 				margin-right: 6px
-				color: $white
+				color: $text
 				opacity: 0.4
 			> .number::before
 				counter-increment: nav-number
 				content: counter(nav-number, decimal-leading-zero)
 		&-link
-			color: $white
+			color: $text
 			text-transform: uppercase
+			&[aria-current="page"]
+				pointer-events: none
+				color: $blue
 			&:hover
-				color: $yellow-200
+				color: $blue

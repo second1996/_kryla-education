@@ -1,0 +1,61 @@
+.p-cost
+	
+	// Section: Includes
+	&-includes
+
+	// Section: Pricelist
+	&-price
+		&-list
+			.price
+				&--yellow
+					.price-label
+						background-color: $bg-yellow
+					.price-value .number
+						color: $yellow-200
+				&--purple
+					.price-label
+						background-color: $bg-purple
+					.price-value .number
+						color: $purple
+				&-label
+					display: inline-block
+					padding: 10px 20px
+					color: $dark
+					font-weight: $w-medium
+					+media-breakpoint-down(xs)
+						padding: 8px 16px
+						font-size: 15px
+				&-value
+					display: flex
+					margin-top: 10px
+					.number
+						position: relative
+						display: inline-block
+						font-size: 100px
+						font-weight: $w-black
+						line-height: 1
+						+media-breakpoint-down(sm)
+							font-size: 80px
+							> span
+								top: 0
+								font-size: 15px
+						+media-breakpoint-down(xs)
+							font-size: 60px
+							> span
+								top: -2px
+								font-size: 12px
+						> span
+							position: absolute
+							top: 4px
+							left: 100%
+							display: inline-block
+							margin-left: 20px
+							color: $text
+							font-size: 17px
+							font-weight: $w-medium
+							white-space: nowrap
+							transform: rotate(90deg)
+							transform-origin: left center
+		&-descr
+			max-width: 860px
+			margin-top: 50px

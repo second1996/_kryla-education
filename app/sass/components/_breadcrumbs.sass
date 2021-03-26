@@ -1,5 +1,7 @@
 .breadcrumbs
 	margin-bottom: 20px
+	+media-breakpoint-down(xs)
+		margin-bottom: 10px
 	&-list
 		display: flex
 		flex-wrap: wrap
@@ -13,12 +15,15 @@
 				display: inline-block
 				vertical-align: middle
 				margin: 0 12px
+				color: $gray-200
 				+font-size(xxs)
 			> a,
 			> span
 				font-size: 15px
 				font-weight: $w-medium
 				text-transform: uppercase
+				+media-breakpoint-down(xs)
+					font-size: 14px
 			> a
 				color: $dark
 				&:hover

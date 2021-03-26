@@ -1,0 +1,50 @@
+.p-faq
+	&-list
+		.faq
+			&-item
+				&:not(:last-child)
+					margin-bottom: 20px
+			&-question
+				.btn
+					width: 100%
+					height: auto
+					min-height: 84px
+					justify-content: space-between
+					min-width: auto
+					background-color: $bg-blue
+					color: $dark
+					font-size: 20px
+					font-weight: $w-medium
+					line-height: 1.2em
+					letter-spacing: normal
+					white-space: normal
+					text-align: left
+					text-transform: none
+					+media-breakpoint-down(md)
+						min-height: 70px
+						font-size: 17px
+					&:focus
+						box-shadow: 0 0 0 3px rgba($blue, 0.25)
+					&::after
+						content: '+'
+						flex: 0 0 auto
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 24px
+						height: 24px
+						margin-left: 12px
+						font-size: 24px
+					&[aria-expanded="true"]
+						background-color: $yellow-200
+						&:focus
+							box-shadow: 0 0 0 3px rgba($yellow-200, 0.25)
+						&::after
+							content: '–'
+			&-answer
+				padding: 30px
+				+media-breakpoint-down(xs)
+					padding: 20px
+					font-size: 15px
+				> p:last-child
+					margin-bottom: 0
