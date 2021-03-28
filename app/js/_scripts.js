@@ -64,12 +64,14 @@ $('#classroomModal').on('show.bs.modal', function (event) {
 
 	if (recipient) {
 		modal.find('#classroom-request').removeAttr('hidden')
-		modal.find('#classroom-choose').attr('hidden', true)
 		modal.find('#classroom-request .form-control').val(recipient)
+		modal.find('#classroom-choose').attr('hidden', true)
+		modal.find('#classroom-choose .form-control').removeAttr('required')
 		modal.find('#classroom-choose .form-select option:first').prop('selected', true)
 	} else {
 		modal.find('#classroom-request').attr('hidden', true)
-		modal.find('#classroom-request .form-control').removeAttr('value')
+		modal.find('#classroom-request .form-control').val('')
 		modal.find('#classroom-choose').removeAttr('hidden')
+		modal.find('#classroom-choose .form-control').attr('required', true)
 	}
 })

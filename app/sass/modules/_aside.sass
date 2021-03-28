@@ -13,6 +13,7 @@
 
 	// Right side
 	.right-side
+		right: 0
 		z-index: 99
 		+media-breakpoint-down(lg)
 			display: none
@@ -21,7 +22,6 @@
 	.left-side
 		left: 0
 		z-index: 999
-		border-right: 1px solid $border
 		+media-breakpoint-down(lg)
 			bottom: auto
 			z-index: 999
@@ -113,7 +113,3 @@
 					font-size: 18px
 					&:hover
 						color: $purple
-
-	// Right side
-	.right-side
-		right: 0

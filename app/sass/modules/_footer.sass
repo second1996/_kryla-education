@@ -42,7 +42,9 @@
 		&-content
 			padding-right: 40px
 			.title
-				max-width: 750px
+				max-width: 80%
+				+media-breakpoint-down(xl)
+					max-width: 700px
 				+media-breakpoint-down(md)
 					font-size: 32px
 				+media-breakpoint-down(xs)

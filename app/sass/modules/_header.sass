@@ -10,14 +10,14 @@ body.home
 		+media-breakpoint-down(xl)
 			left: 80px
 			right: 80px
-		.nav-item
+		.menu-item
 			> span,
 			> .number
 				color: $white
-		.nav-link
-			color: $white
-			&:hover
-				color: $yellow-200
+			> a
+				color: $white
+				&:hover
+					color: $yellow-200
 
 .site-header
 	display: flex
@@ -31,7 +31,7 @@ body.home
 		> [class*="col"]
 			padding-left: 0
 			padding-right: 0
-	.nav
+	.menu
 		counter-reset: nav-number
 		display: flex
 		&-item
@@ -55,11 +55,11 @@ body.home
 			> .number::before
 				counter-increment: nav-number
 				content: counter(nav-number, decimal-leading-zero)
-		&-link
-			color: $text
-			text-transform: uppercase
-			&[aria-current="page"]
-				pointer-events: none
-				color: $blue
-			&:hover
-				color: $blue
+			> a
+				color: $text
+				text-transform: uppercase
+				&[aria-current="page"]
+					pointer-events: none
+					color: $blue
+				&:hover
+					color: $blue

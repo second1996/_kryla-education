@@ -4,7 +4,6 @@ window.jQuery = $
 window.$ = $
 
 // Import vendor jQuery plugin (not module)
-require('../../node_modules/popper.js/dist/popper.min.js') // Popper lib
 require('../../node_modules/bootstrap/js/dist/util.js') // Bootstrap Util lib
 require('../../node_modules/bootstrap/js/dist/modal.js') // Bootstrap Modal
 require('../../node_modules/bootstrap/js/dist/collapse.js') // Bootstrap Collapse (Accordion)

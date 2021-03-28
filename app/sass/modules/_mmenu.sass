@@ -28,7 +28,7 @@
 		.mmenu-nav > li
 			animation-name: fadeInRight
 			animation-fill-mode: both
-			animation-duration: 0.5s
+			animation-duration: 0.75s
 
 	// Backdrop
 	&-backdrop
@@ -59,7 +59,7 @@
 		counter-reset: menu-counter
 		@for $i from 1 through 20
 			> li:nth-child(#{$i})
-				animation-delay: $i*0.1s
+				animation-delay: $i*0.075s
 		> li
 			position: relative
 			padding-left: 26px
