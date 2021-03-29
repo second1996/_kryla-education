@@ -4155,6 +4155,8 @@ ul.ul-circle--blue > li::before {
 .p-faq-list .faq-question .btn {
   width: 100%;
   height: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
   min-height: 84px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
