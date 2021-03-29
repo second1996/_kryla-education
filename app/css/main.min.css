@@ -3649,8 +3649,7 @@ main.site-main {
 .breadcrumbs-list > li > span {
   color: #dad9d9
 }
-.btn,
-button {
+.btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3683,19 +3682,16 @@ button {
   -o-transition: .3s ease;
   transition: .3s ease
 }
-.btn:hover,
-button:hover {
+.btn:hover {
   color: inherit;
   background-color: #f5fcff
 }
-.btn:focus,
-button:focus {
+.btn:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(54,59,70,.15);
   box-shadow: 0 0 0 3px rgba(54,59,70,.15);
   background-color: #fff
 }
-.btn:disabled,
-button:disabled {
+.btn:disabled {
   background-color: #dad9d9!important
 }
 .btn {
@@ -3879,7 +3875,6 @@ label {
   object-fit: scale-down
 }
 .image-gray {
-  margin-right: 1px;
   background-color: #fafafa
 }
 ul.ul-check > li {
@@ -4528,12 +4523,15 @@ ul.ul-circle--blue > li::before {
   height: 100%;
   min-height: 450px;
   padding: 25px 10px 25px 25px;
-  margin-right: 20px
+  margin-right: 20px;
+  -webkit-transition: .45s ease!important;
+  -o-transition: .45s ease!important;
+  transition: .45s ease!important
 }
 .h-classroom-card:hover .wing {
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  transform: scale(1.25)
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2)
 }
 .h-classroom-card .title {
   margin-bottom: 10px
@@ -4601,6 +4599,10 @@ ul.ul-circle--blue > li::before {
 .h-classroom-card--yellow {
   background-color: #ffde7b
 }
+.h-classroom-card--yellow:hover {
+  -webkit-box-shadow: 0 0 0 6px rgba(244,212,114,.25);
+  box-shadow: 0 0 0 6px rgba(244,212,114,.25)
+}
 .h-classroom-card--yellow .descr,
 .h-classroom-card--yellow .link,
 .h-classroom-card--yellow .title {
@@ -4618,6 +4620,10 @@ ul.ul-circle--blue > li::before {
 }
 .h-classroom-card--purple {
   background-color: #b787b4
+}
+.h-classroom-card--purple:hover {
+  -webkit-box-shadow: 0 0 0 6px rgba(183,135,180,.25);
+  box-shadow: 0 0 0 6px rgba(183,135,180,.25)
 }
 .h-classroom-card--purple .descr,
 .h-classroom-card--purple .link,
@@ -4641,8 +4647,62 @@ ul.ul-circle--blue > li::before {
   padding-right: 45px
 }
 .h-reviews-item {
+  position: relative;
   display: inline-block;
   background-color: #fff
+}
+.h-reviews-item:hover .play-video {
+  visibility: visible;
+  opacity: 1
+}
+.h-reviews-item:hover .play-video .icon {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none
+}
+.h-reviews-item .play-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease
+}
+.h-reviews-item .play-video .icon {
+  width: 60px;
+  height: 60px;
+  fill: #fff;
+  -webkit-transform: scale(.9);
+  -ms-transform: scale(.9);
+  transform: scale(.9);
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease
+}
+.h-reviews-item .play-video .icon:hover {
+  fill: #ffc107
+}
+.h-reviews-item .play-video::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(183,135,180,.75)
 }
 .h-reviews-item img {
   -webkit-transition: opacity .3s ease;

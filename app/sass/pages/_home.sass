@@ -366,13 +366,14 @@
 		min-height: 450px
 		padding: 25px 10px 25px 25px
 		margin-right: 20px
+		transition: .45s ease !important
 		+media-breakpoint-down(xl)
 			min-height: 320px
 		+media-breakpoint-down(xs)
 			min-height: 280px
 		&:hover
 			.wing
-				transform: scale(1.25)
+				transform: scale(2)
 		.title
 			margin-bottom: 10px
 		.descr
@@ -418,6 +419,8 @@
 				fill: $white
 		&--yellow
 			background-color: $yellow-200
+			&:hover
+				box-shadow: 0 0 0 6px rgba($yellow-300, 0.25)
 			.title,
 			.descr,
 			.link
@@ -431,6 +434,8 @@
 				opacity: 0.2
 		&--purple
 			background-color: $purple
+			&:hover
+				box-shadow: 0 0 0 6px rgba($purple, 0.25)
 			.title,
 			.descr,
 			.link
@@ -469,8 +474,43 @@
 				.h-reviews-item
 					margin-left: 30px
 	&-item
+		position: relative
 		display: inline-block
 		background-color: $white
+		&:hover
+			.play-video
+				visibility: visible
+				opacity: 1
+				.icon
+					transform: none
+		.play-video
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			visibility: hidden
+			opacity: 0
+			transition: $trs
+			.icon
+				width: 60px
+				height: 60px
+				fill: $white
+				transform: scale(0.9)
+				transition: $trs
+				&:hover
+					fill: $yellow
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				z-index: -1
+				background-color: rgba($purple, 0.75)
 		img
 			transition: opacity .3s ease
 		&:hover
