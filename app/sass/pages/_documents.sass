@@ -1,0 +1,47 @@
+.p-documents-list
+	.document
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 14px 20px
+		min-height: 84px
+		justify-content: space-between
+		min-width: auto
+		background-color: $bg-blue
+		color: $dark
+		font-size: 20px
+		font-weight: $w-medium
+		line-height: 1.2em
+		letter-spacing: normal
+		white-space: normal
+		text-align: left
+		text-transform: none
+		+media-breakpoint-down(md)
+			min-height: 70px
+		&:hover
+			box-shadow: 0 0 0 3px rgba($blue, 0.25)
+			.document-download
+				background-color: $blue
+				color: $white
+		&:not(:last-child)
+			margin-bottom: 20px
+	.document-title
+		flex: 1 1 auto
+		padding-right: 12px
+	// Download button
+	.document-download
+		flex: 0 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background-color: $yellow-200
+		color: $dark
+		font-size: 16px
+		line-height: 1
+		transition: $trs
+		+media-breakpoint-down(xs)
+			width: 36px
+			height: 36px
