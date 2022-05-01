@@ -1671,6 +1671,9 @@ button.swiper-pagination-bullet {
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer
 }
+.swiper-pagination-bullet:only-child {
+  display: none!important
+}
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: var(--swiper-pagination-color,var(--swiper-theme-color))
@@ -2343,7 +2346,7 @@ body.compensate-for-scrollbar {
   text-align: center;
   z-index: 99996
 }
-@supports (padding:0px) {
+@supports (padding:max(0px)) {
   .fancybox-caption {
     padding: 75px max(44px,env(safe-area-inset-right)) max(25px,env(safe-area-inset-bottom)) max(44px,env(safe-area-inset-left))
   }
@@ -3004,7 +3007,6 @@ article {
 .article img,
 .article ol,
 .article p,
-.article table,
 .article ul,
 article blockquote,
 article h1,
@@ -3016,9 +3018,12 @@ article h6,
 article img,
 article ol,
 article p,
-article table,
 article ul {
   margin-bottom: 24px
+}
+.article table,
+article table {
+  margin-top: 48px
 }
 .article b,
 .article strong,
@@ -4035,6 +4040,50 @@ ul.ul-circle--blue > li::before {
 }
 .modal-descr {
   margin-bottom: 20px
+}
+table {
+  width: 100%
+}
+table thead {
+  background-color: #ffde7b
+}
+table thead th {
+  padding: 30px 20px;
+  color: #363b46;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center
+}
+table thead th:not(:last-child) {
+  border-right: 1px solid rgba(54,59,70,.1)
+}
+table tbody tr:last-child {
+  border-bottom: 1px solid #edf5f8
+}
+table tbody tr:nth-child(odd) {
+  background-color: #fff
+}
+table tbody tr:nth-child(even) {
+  background-color: #faf6f9
+}
+table tbody th {
+  font-weight: 500
+}
+table tbody td,
+table tbody th {
+  color: #363b46;
+  font-size: 15px;
+  padding: 10px 20px
+}
+table tbody td b,
+table tbody td strong,
+table tbody th b,
+table tbody th strong {
+  font-weight: 500
+}
+table tbody td:not(:last-child),
+table tbody th:not(:last-child) {
+  border-right: 1px solid #edf5f8
 }
 .p-contacts-wrapper {
   display: -webkit-box;
@@ -9855,7 +9904,6 @@ ul.ul-circle--blue > li::before {
   .article img,
   .article ol,
   .article p,
-  .article table,
   .article ul,
   article blockquote,
   article h1,
@@ -9867,9 +9915,12 @@ ul.ul-circle--blue > li::before {
   article img,
   article ol,
   article p,
-  article table,
   article ul {
     margin-bottom: 16px
+  }
+  .article table,
+  article table {
+    margin-top: 32px
   }
   .footer-cta {
     padding-top: 60px;
@@ -10042,6 +10093,15 @@ ul.ul-circle--blue > li::before {
   .btn {
     min-width: 260px
   }
+  table thead th {
+    padding: 20px 15px;
+    font-size: 15px
+  }
+  table tbody td,
+  table tbody th {
+    padding: 10px 15px;
+    font-size: 14px
+  }
   .p-cost-price-list .price-value .number {
     font-size: 80px
   }
@@ -10206,6 +10266,15 @@ ul.ul-circle--blue > li::before {
   .modal-body {
     padding: 30px
   }
+  table thead th {
+    padding: 15px 10px;
+    font-size: 14px
+  }
+  table tbody td,
+  table tbody th {
+    padding: 10px;
+    font-size: 13px
+  }
   .p-cost-price-list .price-label {
     padding: 8px 16px;
     font-size: 15px
@@ -10329,7 +10398,7 @@ ul.ul-circle--blue > li::before {
     padding-left: 12px;
     padding-right: 12px
   }
-  @supports (padding:0px) {
+  @supports (padding:max(0px)) {
     .fancybox-caption {
       padding-left: max(12px,env(safe-area-inset-left));
       padding-right: max(12px,env(safe-area-inset-right))

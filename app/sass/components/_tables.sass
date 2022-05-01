@@ -1,0 +1,43 @@
+table
+	width: 100%
+	thead
+		background-color: $yellow-200
+		th
+			padding: 30px 20px
+			color: $dark
+			font-size: 16px
+			font-weight: $w-bold
+			text-align: center
+			+media-breakpoint-down(sm)
+				padding: 20px 15px
+				font-size: 15px
+			+media-breakpoint-down(xs)
+				padding: 15px 10px
+				font-size: 14px
+			&:not(:last-child)
+				border-right: 1px solid rgba($dark, 0.1)
+	tbody
+		tr
+			&:last-child
+				border-bottom: 1px solid $border
+			&:nth-child(odd)
+				background-color: $white
+			&:nth-child(even)
+				background-color: $bg-purple
+		th
+			font-weight: $w-medium
+		th,
+		td
+			color: $dark
+			font-size: 15px
+			padding: 10px 20px
+			+media-breakpoint-down(sm)
+				padding: 10px 15px
+				font-size: 14px
+			+media-breakpoint-down(xs)
+				padding: 10px
+				font-size: 13px
+			b, strong
+				font-weight: $w-medium
+			&:not(:last-child)
+				border-right: 1px solid $border
