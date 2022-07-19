@@ -3,8 +3,6 @@ ul.ul-check
 	> li
 		display: flex
 		color: $dark
-		> span
-			padding-right: 15px
 		&::before
 			content: ''
 			flex: 0 0 auto
@@ -14,14 +12,25 @@ ul.ul-check
 			height: 15px
 			margin-right: 10px
 			background: url('../images/dist/icons/check-yellow.svg') no-repeat center/cover
+		> span
+			flex: 1 1 auto
+			padding-right: 15px
+	&--purple	> li
+		&::before
+			background-image: url('../images/dist/icons/check-purple.svg')
+		> ul > li::before
+			background-color: $purple
+	&--blue > li
+		&::before
+			background-image: url('../images/dist/icons/check-blue.svg')
+		> ul > li::before
+			background-color: $blue
 
 // Circle list
 ul.ul-circle
 	> li
 		display: flex
 		color: $dark
-		> span
-			padding-right: 15px
 		&::before
 			content: ''
 			flex: 0 0 auto
@@ -31,6 +40,9 @@ ul.ul-circle
 			height: 17px
 			margin-right: 12px
 			border-radius: 50%
+		> span
+			flex: 1 1 auto
+			padding-right: 15px
 	&--yellow > li::before
 		background-color: $yellow-200
 	&--purple > li::before

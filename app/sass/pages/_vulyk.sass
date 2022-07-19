@@ -1,0 +1,432 @@
+// Section: Heroes
+.v-heroes
+	background-color: $yellow-200
+	&::after
+		background-color: $yellow-200
+	// Scroll down
+	.h-heroes-scroll-arrow > span
+		fill: $dark
+		color: $dark
+	// Address
+	.h-heroes-adress
+		display: flex
+		+media-breakpoint-down(xs)
+			flex-direction: column
+		> span
+			margin-right: 10px
+	// Photo
+	.h-heroes-photo
+		right: 1vw
+		&[data-aos="heroes"]
+			transform: rotate(20deg) scale(0.9)
+			opacity: 0
+			transition-property: transform, opacity
+			&.aos-animate
+				transform: rotate(0deg) scale(1)
+				opacity: 1
+		> img
+			padding-top: 160px
+			padding-bottom: 80px
+			+media-breakpoint-down(lg)
+				opacity: 0.65
+			+media-breakpoint-down(md)
+				padding-top: 120px
+				padding-bottom: 40px
+				opacity: 0.35
+
+// Section: Conception
+.v-conception
+	&-content
+		.ul-check
+			> li:not(:last-child)
+				margin-bottom: 15px
+	&-photo
+		text-align: center
+		+media-breakpoint-down(md)
+			margin-top: 45px
+		> img
+			padding-left: 30px
+			padding-right: 30px
+			+media-breakpoint-down(xl)
+				padding-left: 0
+			+media-breakpoint-down(lg)
+				padding-left: 30px
+			+media-breakpoint-down(md)
+				max-width: 300px
+				padding-left: 0
+			+media-breakpoint-down(xs)
+				max-width: 240px
+
+// Section: Advantages
+.v-advantages
+	&-figures
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-left: 30px
+		padding-right: 30px
+		+media-breakpoint-down(lg)
+			padding-left: 0
+
+// Section: Groups
+.v-groups
+	&-list
+		> [class*="col"]:nth-child(odd)
+			padding-right: 30px
+			+media-breakpoint-down(md)
+				padding-right: 15px
+			+media-breakpoint-down(sm)
+				padding-right: 0
+		> [class*="col"]:nth-child(even)
+			padding-left: 30px
+			+media-breakpoint-down(md)
+				padding-left: 15px
+			+media-breakpoint-down(sm)
+				padding-left: 0
+	&-card
+		display: flex
+		flex-direction: column
+		&-photo
+			position: relative
+			flex: 0 0 auto
+			height: 400px
+			+media-breakpoint-down(xl)
+				height: 320px
+			+media-breakpoint-down(xs)
+				height: 280px
+			+media-breakpoint-down(xxs)
+				height: 240px
+			.labels
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				display: flex
+				background-color: rgba(#7F63BC, 0.85)
+				backdrop-filter: blur(5px)
+				&-item
+					flex: 0 0 33.33333%
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 10px
+					color: $white
+					font-size: 14px
+					+media-breakpoint-down(md)
+						flex-direction: column
+						padding: 4px 2px 10px
+					&:not(:last-child)
+						border-right: 1px solid rgba($white, 0.15)
+					> span
+						margin-left: 8px
+						padding: 4px
+						background-color: $yellow-200
+						color: $dark
+						font-size: 10px
+						font-weight: $w-medium
+						text-align: center
+						line-height: 1
+						+media-breakpoint-down(md)
+							margin-left: 0
+		&-body
+			flex: 1 1 auto
+			margin-top: 30px
+			.includes
+				display: flex
+				flex-wrap: wrap
+				margin-bottom: 15px
+				+media-breakpoint-down(xs)
+					margin-bottom: 0
+				&-item
+					flex: 0 0 50%
+					display: flex
+					height: 100%
+					padding-right: 15px
+					padding-bottom: 15px
+					+media-breakpoint-down(xs)
+						padding-right: 10px
+					+media-breakpoint-down(xxs)
+						padding-right: 0
+						flex-basis: 100%
+					> svg
+						flex: 0 0 auto
+						width: 24px
+						height: 24px
+					> span
+						flex: 1 1 auto
+						align-self: center
+						margin-left: 10px
+			.schedule
+				&-item
+					flex-wrap: wrap
+					&:not(:last-child)
+						margin-bottom: 10px
+					> ul
+						flex: 0 0 100%
+						> li
+							position: relative
+							margin-top: 10px
+							padding-left: 25px
+							&::before
+								content: ''
+								position: absolute
+								top: 10px
+								left: 0
+								display: block
+								width: 7px
+								height: 7px
+								margin-left: 4px
+								border-radius: 50%
+								background-color: $blue
+		&-footer
+			flex: 0 0 auto
+			margin-top: 30px
+			.btn
+				width: 100%
+
+// Section: Location
+.v-location
+	&-item
+		&:not(:last-child)
+			margin-bottom: 20px
+		.location
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 14px 20px
+			min-height: 84px
+			justify-content: space-between
+			min-width: auto
+			background-color: $bg-blue
+			color: $dark
+			font-size: 20px
+			font-weight: $w-medium
+			line-height: 1.2em
+			letter-spacing: normal
+			white-space: normal
+			text-align: left
+			text-transform: none
+			+media-breakpoint-down(md)
+				min-height: 70px
+			&:hover
+				box-shadow: 0 0 0 3px rgba($blue, 0.25)
+				.location-link
+					background-color: $blue
+					color: $white
+			&:not(:last-child)
+				margin-bottom: 20px
+			&-title
+				flex: 1 1 auto
+				margin-bottom: 0
+				padding-right: 12px
+				> b
+					font-weight: $w-medium
+			&-link
+				flex: 0 0 auto
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background-color: $yellow-200
+				color: $dark
+				font-size: 14px
+				line-height: 1
+				transition: $trs
+				+media-breakpoint-down(xs)
+					width: 36px
+					height: 36px
+
+// Section: Gallery
+.v-gallery
+	&::before
+		content: ''
+		user-select: none
+		pointer-events: none
+		position: absolute
+		top: -75px
+		left: 5vw
+		right: 0
+		bottom: 0
+		display: block
+		width: auto
+		height: 600px
+		background: url('../images/dist/honeycomb.png') no-repeat left/contain
+		opacity: 0.15
+		+media-breakpoint-down(lg)
+			top: -60px
+			height: 500px
+		+media-breakpoint-down(md)
+			display: none
+	&-content
+		padding-right: 45px
+		+media-breakpoint-down(md)
+			margin-bottom: 40px
+		+media-breakpoint-down(xs)
+			padding-right: 0
+	&-photo
+		height: 500px
+		margin-right: 1px
+		+media-breakpoint-down(lg)
+			height: 400px
+		+media-breakpoint-down(sm)
+			height: 320px
+		+media-breakpoint-down(xxs)
+			height: 260px
+
+// Section: Documents
+.v-documents
+	&-item
+		&:not(:last-child)
+			margin-bottom: 20px
+		.document
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 14px 20px
+			min-height: 84px
+			justify-content: space-between
+			min-width: auto
+			background-color: $bg-blue
+			color: $dark
+			font-size: 20px
+			font-weight: $w-medium
+			line-height: 1.2em
+			letter-spacing: normal
+			white-space: normal
+			text-align: left
+			text-transform: none
+			+media-breakpoint-down(md)
+				min-height: 70px
+			&:hover
+				box-shadow: 0 0 0 3px rgba($blue, 0.25)
+				.document-download
+					background-color: $blue
+					color: $white
+			&-title
+				flex: 1 1 auto
+				margin-bottom: 0
+				padding-right: 12px
+			&-download
+				flex: 0 0 auto
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background-color: $yellow-200
+				color: $dark
+				font-size: 16px
+				line-height: 1
+				transition: $trs
+				+media-breakpoint-down(xs)
+					width: 36px
+					height: 36px
+
+// Section: Prices
+.v-prices
+	&-includes,
+	&-cost
+		margin-top: 100px
+		+media-breakpoint-down(xl)
+			margin-top: 75px
+		+media-breakpoint-down(lg)
+			margin-top: 60px
+		+media-breakpoint-down(sm)
+			margin-top: 45px
+		&-title
+			font-size: 32px
+			line-height: 1.15
+			+media-breakpoint-down(lg)
+				font-size: 28px
+				line-height: 1.3
+			+media-breakpoint-down(sm)
+				font-size: 24px
+
+	// Cost
+	&-cost
+		.price
+			&--yellow
+				.price-label
+					background-color: $bg-yellow
+				.price-value .number
+					color: $yellow-200
+			&--purple
+				.price-label
+					background-color: $bg-purple
+				.price-value .number
+					color: $purple
+			&-label
+				display: inline-block
+				padding: 10px 20px
+				color: $dark
+				font-weight: $w-medium
+				+media-breakpoint-down(xs)
+					padding: 8px 16px
+					font-size: 15px
+			&-value
+				display: flex
+				margin-top: 10px
+				.number
+					position: relative
+					display: inline-block
+					font-size: 100px
+					font-weight: $w-black
+					line-height: 1
+					+media-breakpoint-down(sm)
+						font-size: 80px
+						> span
+							top: 0
+							font-size: 15px
+					+media-breakpoint-down(xs)
+						font-size: 60px
+						> span
+							top: -2px
+							font-size: 12px
+					> span
+						position: absolute
+						top: 4px
+						left: 100%
+						display: inline-block
+						margin-left: 20px
+						color: $text
+						font-size: 17px
+						font-weight: $w-medium
+						white-space: nowrap
+						transform: rotate(90deg)
+						transform-origin: left center
+		// Info
+		&-info
+			max-width: 860px
+			margin-top: 50px
+
+// Section: Contacts
+.v-contacts
+	&-phone,
+	&-social
+		> span
+			display: block
+			margin-bottom: 15px
+			+media-breakpoint-down(md)
+				margin-bottom: 10px
+		> a
+			font-size: 36px
+			font-weight: $w-black
+			+media-breakpoint-down(lg)
+				font-size: 32px
+			+media-breakpoint-down(md)
+				font-size: 26px
+	&-social
+		> a
+			&:not(:last-child)
+				margin-right: 30px
+				+media-breakpoint-down(md)
+					margin-right: 15px
+			&:hover
+				opacity: 0.75
+			&.facebook
+				color: #4867AA
+			&.instagram
+				color: #ED4B61

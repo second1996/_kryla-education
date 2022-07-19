@@ -1,6 +1,7 @@
 @import '../helpers/helpers'
 
-body.home
+body.home,
+body.vulyk
 	.site-header
 		position: absolute
 		top: 0
@@ -10,14 +11,15 @@ body.home
 		+media-breakpoint-down(xl)
 			left: 80px
 			right: 80px
-		.menu-item
-			> span,
-			> .number
-				color: $white
-			> a
-				color: $white
-				&:hover
-					color: $yellow-200
+body.home
+	.menu-item
+		> span,
+		> .number
+			color: $white
+		> a
+			color: $white
+			&:hover
+				color: $yellow-200
 
 .site-header
 	display: flex
