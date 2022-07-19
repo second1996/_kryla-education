@@ -1,8 +1,11 @@
 @import '../helpers/helpers'
 
 body.vulyk
-	.footer-cta::after
-		background-color: rgba($blue, 0.95)
+	.footer-cta
+		&::before
+			background-image: url('../images/dist/footer-cta-vulyk.jpg')
+		&::after
+			background-color: rgba($blue, 0.95)
 
 .footer
 	margin-left: 100px

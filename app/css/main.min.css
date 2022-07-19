@@ -3184,6 +3184,9 @@ article a:hover {
 .sides .left-side-wrapper .social-link:hover {
   color: #b787b4
 }
+body.vulyk .footer-cta::before {
+  background-image: url(../images/dist/footer-cta-vulyk.jpg)
+}
 body.vulyk .footer-cta::after {
   background-color: rgba(99,177,188,.95)
 }
