@@ -4197,6 +4197,12 @@ table tbody th:not(:last-child) {
 .p-cost-price-list .price--purple .price-value .number {
   color: #b787b4
 }
+.p-cost-price-list .price--blue .price-label {
+  background-color: #f5fcff
+}
+.p-cost-price-list .price--blue .price-value .number {
+  color: #63b1bc
+}
 .p-cost-price-list .price-label {
   display: inline-block;
   padding: 10px 20px;
