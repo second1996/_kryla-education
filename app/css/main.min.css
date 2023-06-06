@@ -5340,10 +5340,25 @@ table tbody th:not(:last-child) {
   display: block;
   margin-bottom: 15px
 }
-.v-contacts-phone > a,
-.v-contacts-social > a {
+.v-contacts-phone a,
+.v-contacts-social a {
   font-size: 36px;
   font-weight: 800
+}
+.v-contacts-phone .phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+.v-contacts-phone .phones > a:not(:last-child) {
+  margin-bottom: .5em
 }
 .v-contacts-social > a:not(:last-child) {
   margin-right: 30px
@@ -10333,8 +10348,8 @@ table tbody th:not(:last-child) {
     font-size: 28px;
     line-height: 1.3
   }
-  .v-contacts-phone > a,
-  .v-contacts-social > a {
+  .v-contacts-phone a,
+  .v-contacts-social a {
     font-size: 32px
   }
 }
@@ -10592,8 +10607,8 @@ table tbody th:not(:last-child) {
   .v-contacts-social > span {
     margin-bottom: 10px
   }
-  .v-contacts-phone > a,
-  .v-contacts-social > a {
+  .v-contacts-phone a,
+  .v-contacts-social a {
     font-size: 26px
   }
   .v-contacts-social > a:not(:last-child) {

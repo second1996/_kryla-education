@@ -411,13 +411,20 @@
 			margin-bottom: 15px
 			+media-breakpoint-down(md)
 				margin-bottom: 10px
-		> a
+		a
 			font-size: 36px
 			font-weight: $w-black
 			+media-breakpoint-down(lg)
 				font-size: 32px
 			+media-breakpoint-down(md)
 				font-size: 26px
+	&-phone
+		.phones
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			> a:not(:last-child)
+				margin-bottom: 0.5em
 	&-social
 		> a
 			&:not(:last-child)
